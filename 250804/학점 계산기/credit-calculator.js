@@ -7,7 +7,7 @@ const avgDegree = (arr.reduce((acc,curr)=>acc+curr,0)/n).toFixed(1)
 
 console.log(avgDegree)
 
-if(avgDegree > 4.0) console.log('Perfect')
-else if(avgDegree > 3.0) console.log('Good')
-else if(avgDegree < 3.0) console.log('Poor')
+if(avgDegree >= 4.0) console.log('Perfect')
+else if(avgDegree >= 3.0) console.log('Good')
+else console.log('Poor')
 
