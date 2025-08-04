@@ -12,4 +12,4 @@ for(let n of arr){
     cnt++
 }
 
-console.log(sum, sum/cnt.toFixed(1))
+console.log(sum, (sum/cnt).toFixed(1))
