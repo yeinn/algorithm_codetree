@@ -15,7 +15,7 @@ const students = input.slice(1).map((arr)=>arr.split(' ').map(Number))
 
 let passCnt = 0
 const checkFn = (scores) => {
-    const isPass = ((scores.reduce((arr,curr)=>arr+curr,0))/4) > 60
+    const isPass = ((scores.reduce((arr,curr)=>arr+curr,0))/4) >= 60
     if(isPass) passCnt++
     console.log(isPass ? 'pass' : 'fail') 
 }
