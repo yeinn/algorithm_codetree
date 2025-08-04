@@ -12,4 +12,4 @@ for(const n of arr){
     cnt++
 }
 
-console.log(sum, sum/cnt)
+console.log(sum, sum/cnt.toFixed(1))
