@@ -12,9 +12,4 @@ for(const n of arr){
     cnt++
 }
 
-if (cnt === 0){
-    sum = arr.reduce((acc,curr)=>acc+curr,0)
-    cnt = 10
-}
-
 console.log(sum, sum/cnt)
