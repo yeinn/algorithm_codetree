@@ -4,7 +4,7 @@ const arr = fs.readFileSync(0).toString().trim().split(' ').map((s)=>parseInt(s)
 let cnt = 0
 let sum = 0
 
-for(const n of arr){
+for(let n of arr){
     if(n >=250) {
         break 
     }
