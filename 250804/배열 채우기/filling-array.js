@@ -8,9 +8,9 @@ const fs = require('fs')
 const arr = fs.readFileSync(0).toString().trim().split(' ').map(Number)
 const r_arr = []
 
-arr.forEach((n)=>{
-    if(n === 0) return
+for (const n of arr){
+    if(n === 0) break
     r_arr.push(n)
-})
+}
 
 console.log(r_arr.reverse().join(' '))
