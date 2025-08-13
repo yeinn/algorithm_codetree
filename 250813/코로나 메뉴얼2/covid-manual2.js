@@ -14,7 +14,7 @@ function chkCold(status){
 
     const fever = Number(feverStr)
 
-    const key = flag === 'Y' ? (fever >= 27 ? 'A': 'C'):(fever >= 37 ? 'B' : 'D')
+    const key = flag === 'Y' ? (fever >= 37 ? 'A': 'C'):(fever >= 37 ? 'B' : 'D')
     clinic[key]++
 }
 
