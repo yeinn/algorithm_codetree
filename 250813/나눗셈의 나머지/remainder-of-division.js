@@ -1,23 +1,14 @@
 const fs = require('fs')
-let [a, b] = fs.readFileSync(0).toString().trim().split(' ')
+let [a, b] = fs.readFileSync(0).toString().trim().split(' ').map(Number)
 
-const resultMap = new Map
+const cnt = new Array(b).fill(0)
 
-while(a > 1){
-    a = a / b
-    const remain = Math.floor(a%b)
-
-    if(resultMap.has(remain)){
-        let val = resultMap.get(remain)
-        resultMap.set(remain, val+1)
-    } else{
-        resultMap.set(remain, 1)
-    }
+//기수 변환 방식 집계
+while(a > 0){
+    const r = Math.floor(a % b)
+   cnt[r]++
+    a =  Math.floor(a / b)
 }
 
-let rs = 0
-for (let r of resultMap.values()){
-    rs += r * r
-}
-
-console.log(rs)
+const result = cnt.reduce((s, c) => s + (c * c),0)
+console.log(result)
